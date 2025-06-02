@@ -3,95 +3,180 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fancy Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <title>[Your Name] — UI/UX Designer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600&family=Pacifico&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #fef6ff, #e3e3ff);
+      color: #333;
+    }
+    header {
+      padding: 2rem 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #ffffffaa;
+      backdrop-filter: blur(10px);
+    }
+    header h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 2rem;
+      color: #8e44ad;
+    }
+    nav a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: #6c5ce7;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #be76e0;
+    }
+    .hero {
+      padding: 6rem 3rem;
+      text-align: center;
+      background: url('https://www.transparenttextures.com/patterns/white-wall.png');
+    }
+    .hero h2 {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+      color: #8e44ad;
+    }
+    .hero p {
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .hero button {
+      padding: 0.9rem 1.6rem;
+      font-size: 1rem;
+      margin: 0 0.5rem;
+      border: none;
+      background: #6c5ce7;
+      color: #fff;
+      cursor: pointer;
+      border-radius: 30px;
+      box-shadow: 0 4px 12px rgba(108, 92, 231, 0.4);
+      transition: background 0.3s;
+    }
+    .hero button:hover {
+      background: #a29bfe;
+    }
+    .projects, .about, .contact {
+      padding: 5rem 3rem;
+    }
+    .projects h3, .about h3, .contact h3 {
+      font-size: 2.4rem;
+      margin-bottom: 1.5rem;
+      color: #6c5ce7;
+      text-align: center;
+    }
+    .project-item {
+      margin-bottom: 2.5rem;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+      transition: transform 0.2s;
+    }
+    .project-item:hover {
+      transform: translateY(-5px);
+    }
+    .project-item h4 {
+      font-size: 1.6rem;
+      margin-bottom: 0.5rem;
+      color: #8e44ad;
+    }
+    .about {
+      background-color: #f5f0ff;
+      text-align: center;
+    }
+    .about img {
+      max-width: 160px;
+      border-radius: 100px;
+      margin-bottom: 1rem;
+      border: 4px solid #e1c8ff;
+    }
+    .contact {
+      background-color: #ffffff;
+    }
+    .contact form {
+      max-width: 600px;
+      margin: auto;
+    }
+    .contact form input,
+    .contact form textarea {
+      display: block;
+      width: 100%;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border: 2px solid #dcd6f7;
+      border-radius: 12px;
+      background: #faf9ff;
+    }
+    .contact form button {
+      background: #8e44ad;
+      color: #fff;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .contact form button:hover {
+      background: #be76e0;
+    }
+  </style>
 </head>
 <body>
-  <!-- Particle.js Background -->
-  <div id="particles-js"></div>
+  <header>
+    <h1>AShrey</h1>
+    <nav>
+      <a href="#projects">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-  <!-- Navigation -->
-  <nav>
-    <div class="container">
-      <a href="#" class="logo">My Portfolio</a>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <button id="theme-toggle">🌙</button>
+  <section class="hero">
+    <h2>Hello, I'm Aachal Shrestha</h2>
+    <p>A UI/UX designer blending creativity and tech to create interfaces with soul and structure.</p>
+    <button>See My Work</button>
+    <button>Let's Talk</button>
+  </section>
+
+  <section id="projects" class="projects">
+    <h3>Featured Projects</h3>
+    <div class="project-item">
+      <h4>✨ Mobile Redesign for Wellness App</h4>
+      <p>Bringing calm and clarity to a wellness app's UI through pastel tones and intentional UX flow.</p>
     </div>
-  </nav>
-
-  <!-- Hero Section -->
-  <section id="hero">
-    <div class="container">
-      <h1>Hi, I'm <span class="highlight">[Your Name]</span></h1>
-      <p>I create <span class="typing"></span></p>
-      <a href="#projects" class="btn">Explore My Work</a>
+    <div class="project-item">
+      <h4>💼 Dashboard UI for Freelancers</h4>
+      <p>Crafted a sleek, intuitive dashboard for creatives to manage clients and deadlines with ease.</p>
     </div>
   </section>
 
-  <!-- About Section -->
-  <section id="about">
-    <div class="container">
-      <h2>About Me</h2>
-      <p>I'm a passionate [Your Role] with expertise in [Your Skills]. I love building things that make a difference.</p>
-    </div>
+  <section id="about" class="about">
+    <h3>About Me</h3>
+    <img src="https://via.placeholder.com/160" alt="Profile Picture">
+    <p>Designer. Problem-solver. Aesthetic lover. I specialize in transforming complex flows into graceful user journeys.</p>
+    <p><strong>Tools I love:</strong> Figma · Framer · Webflow · Protopie · Notion</p>
   </section>
 
-  <!-- Skills Section -->
-  <section id="skills">
-    <div class="container">
-      <h2>Skills</h2>
-      <div class="skills-grid">
-        <div class="skill-card">HTML</div>
-        <div class="skill-card">CSS</div>
-        <div class="skill-card">JavaScript</div>
-        <div class="skill-card">UI/UX Design</div>
-      </div>
-    </div>
+  <section id="contact" class="contact">
+    <h3>Get in Touch</h3>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
   </section>
-
-  <!-- Projects Section -->
-  <section id="projects">
-    <div class="container">
-      <h2>Projects</h2>
-      <div class="projects-grid">
-        <div class="project-card">
-          <h3>Project 1</h3>
-          <p>Description of Project 1.</p>
-        </div>
-        <div class="project-card">
-          <h3>Project 2</h3>
-          <p>Description of Project 2.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact">
-    <div class="container">
-      <h2>Contact Me</h2>
-      <form>
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Your Message" required></textarea>
-        <button type="submit">Send</button>
-      </form>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <p>&copy; 2023 [Your Name]. All rights reserved.</p>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
