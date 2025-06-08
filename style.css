@@ -12,10 +12,22 @@
       background-color: #ffffffaa;
       backdrop-filter: blur(10px);
     }
-    header h1 {
+    .logo-title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem; /* space between logo and text */
+    }
+    
+    .logo-title h1 {
+      margin: 0;
+      text-align: center;
       font-family: 'Pacifico', cursive;
       font-size: 2rem;
       color: #8e44ad;
+    }
+    .logo-title img {
+      display: block;
     }
     nav a {
       margin-left: 1.5rem;
@@ -36,8 +48,10 @@
       font-size: 2.8rem;
       margin-bottom: 1rem;
       color: #8e44ad;
+      font-family: 'Pacifico', cursive;
     }
     .hero p {
+      font-family: 'Comic Neue', cursive, sans-serif;
       font-size: 1.3rem;
       margin-bottom: 2rem;
       max-width: 600px;
@@ -55,6 +69,7 @@
       border-radius: 30px;
       box-shadow: 0 4px 12px rgba(108, 92, 231, 0.4);
       transition: background 0.3s;
+      font-family: 'Inter', sans-serif;
     }
     .hero button:hover {
       background: #a29bfe;
@@ -67,6 +82,7 @@
       margin-bottom: 1.5rem;
       color: #6c5ce7;
       text-align: center;
+      font-family: 'Pacifico', cursive;
     }
     .project-item {
       margin-bottom: 2.5rem;
@@ -95,6 +111,7 @@
       border: 4px solid #e1c8ff;
     }
     .about p {
+      font-family: 'Comic Neue', cursive, sans-serif;
       text-align: center;
       margin-left: auto;
       margin-right: auto;
@@ -125,6 +142,7 @@
       border-radius: 30px;
       cursor: pointer;
       transition: background 0.3s ease;
+      font-family: 'Inter', sans-serif;
     }
     .contact form button:hover {
       background: #be76e0;
