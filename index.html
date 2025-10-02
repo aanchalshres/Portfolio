@@ -3,77 +3,208 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AShrey | Portfolio</title>
-  <link rel="icon" type="image/png" href="alogoc.png">
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <title>Aachal Shrestha | Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #0f172a;
+      color: #e2e8f0;
+    }
+    header {
+      background: url('https://source.unsplash.com/1600x600/?coding,technology') center/cover no-repeat;
+      padding: 100px 20px;
+      text-align: center;
+      position: relative;
+    }
+    header::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(15, 23, 42, 0.7);
+    }
+    header h1, header p {
+      position: relative;
+      z-index: 1;
+    }
+    header h1 { font-size: 2.8em; margin: 0; }
+    header p { font-size: 1.2em; margin-top: 10px; }
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #1e293b;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      color: #e2e8f0;
+      text-decoration: none;
+      padding: 15px 20px;
+      transition: 0.3s;
+    }
+    nav a:hover { color: #38bdf8; }
+    .profile-card {
+      background: #1e293b;
+      margin: -60px auto 40px;
+      max-width: 900px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+      padding: 30px;
+      text-align: center;
+      position: relative;
+      z-index: 10;
+    }
+    .profile-card img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 4px solid #38bdf8;
+      margin-bottom: 15px;
+    }
+    .profile-card h2 { margin: 10px 0 5px; }
+    .profile-card p { color: #94a3b8; margin: 5px 0; }
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 20px;
+    }
+    .stat {
+      text-align: center;
+    }
+    .stat h3 { color: #38bdf8; margin: 0; font-size: 1.5em; }
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+    h2 { color: #38bdf8; margin-bottom: 20px; }
+    .skills span {
+      display: inline-block;
+      background: #334155;
+      color: #e2e8f0;
+      padding: 8px 14px;
+      margin: 6px;
+      border-radius: 20px;
+      transition: transform 0.2s, background 0.3s;
+    }
+    .skills span:hover { transform: scale(1.1); background: #38bdf8; color: #0f172a; }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #1e293b;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      padding: 20px;
+      transition: transform 0.3s;
+    }
+    .card:hover { transform: translateY(-5px); }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #1e293b;
+      color: #94a3b8;
+      margin-top: 40px;
+    }
+    button {
+      background: #38bdf8;
+      color: #0f172a;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s;
+      font-weight: bold;
+    }
+    button:hover { background: #0ea5e9; color: white; }
+  </style>
 </head>
 <body>
   <header>
-  <div class="logo-title">
-    <img src="alogoc.png" alt="AShrey Logo" style="width: 90px; height: 70px; vertical-align: middle;">
-    <h1>AACHAL SHRESTHA</h1>
+    <h1>Aachal Shrestha</h1>
+    <p>Full Stack Developer | Freelancer | Translator</p>
+  </header>
+
+  <div class="profile-card">
+    <img src="https://via.placeholder.com/120" alt="Aachal Profile">
+    <h2>Aachal Shrestha</h2>
+    <p>Kathmandu, Nepal | 1+ years experience</p>
+    <p>Versatile developer with skills in Laravel, C, C++, JS, and translation. Passionate about freelancing, IT projects, and delivering quality solutions.</p>
+    <div class="stats">
+      <div class="stat"><h3>10+</h3><p>Projects</p></div>
+      <div class="stat"><h3>8+</h3><p>Technologies</p></div>
+      <div class="stat"><h3>1+</h3><p>Years Exp.</p></div>
+      <div class="stat"><h3>3+</h3><p>Hackathons</p></div>
+    </div>
   </div>
+
   <nav>
-    <a href="#projects">Work</a>
     <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
   </nav>
-</header>
 
-  <section class="hero">
-    <h2>Welcome to my world-in-progress! </h2>
-    <p> I’m Aachal Shrestha - a computer science and IT student shaping ideas into digital experiences through code and design. Curious to see what I’m building? Scroll down and explore!
-
-</p>
-    <button onclick="location.href='#projects'">See My Work</button>
-    <button onclick="location.href='#contact'">Let's Talk</button>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I'm a Computer Science student and freelancer with expertise in coding (HTML, CSS, JS, C, C++, Laravel), 
+      translation (English, Nepali, Hindi), MS Office tasks, and tutoring. I’ve worked on projects like
+      <strong>Deraa</strong> (a rental platform), <strong>Music Studio Hub</strong>, and <strong>eCommerce websites</strong>.
+      My goal is to grow in IT and provide reliable services to clients.
+    </p>
   </section>
 
-  <section id="projects" class="projects">
-    <h3>Featured Projects</h3>
-    <div class="project-item">
-      <h4>✨ Mobile Design for MHS App</h4>
-      <p>Bringing calm and clarity to a wellness app's UI through pastel tones and intentional UX flow.</p>
-    </div>
-    <div class="project-item">
-      <h4>💼 Dashboard UI for Freelancers</h4>
-      <p>Crafted a sleek, intuitive dashboard for creatives to manage clients and deadlines with ease.</p>
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <span>HTML</span><span>CSS</span><span>JavaScript</span><span>C</span><span>C++</span>
+      <span>Laravel</span><span>Translation</span><span>MS Office</span><span>Tutoring</span><span>WordPress</span>
+      <span>Subtitle QC</span><span>Freelancing</span>
     </div>
   </section>
 
-  <section id="about" class="about">
-    <h3>About Me</h3>
-    <img src="https://github.com/aanchalshres.png" alt="Profile Picture">
-    <p>Passionate Computer Science and IT student who loves to wear many hats—coding, designing, and problem-solving. Skilled in web development with HTML, CSS, JavaScript, PHP, and SQL, while exploring the exciting world of mobile apps through React Native. I thrive on turning ideas into simple, elegant digital solutions and enjoy collaborating to create meaningful projects. Always curious, always growing.
-
-    <br><br>
-    When I’m not deep in code, I’m somewhere sketching interfaces, lost in design trails, tending to quiet leaves, or chasing light in the sky. Let’s connect—you never know what we might create.</p>
-  </section>
-
-  <section id="contact" class="contact">
-    <h3>Get in Touch</h3>
-    <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
-   </section>
-
-  <footer style="text-align:center; padding: 1em 0; background: #f5f5f5; color: #888; font-size: 0.95em;">
-    <div style="margin-bottom: 0.5em;">
-      <a href="https://www.linkedin.com/in/aachal-shrestha-4b5449265/" target="_blank" style="color:#888; margin:0 8px;">
-        <i class="fab fa-linkedin fa-lg"></i>
-      </a>
-      <a href="https://www.instagram.com/aachal._.shres" target="_blank" style="color:#888; margin:0 8px;">
-        <i class="fab fa-instagram fa-lg"></i>
-      </a>
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>Deraa</h3>
+        <p>A user-friendly rental platform connecting tenants with house owners, making renting easier and more secure.</p>
+      </div>
+      <div class="card">
+        <h3>Music Studio Hub</h3>
+        <p>A web application for managing and promoting music studios, providing booking and collaboration features.</p>
+      </div>
+      <div class="card">
+        <h3>E-commerce Websites</h3>
+        <p>Developed e-commerce solutions with user-friendly interfaces and secure transactions for online businesses.</p>
+      </div>
+      <div class="card">
+        <h3>Hackathon Projects</h3>
+        <p>Participated in inter-college hackathons, working on web apps and presentations with a team.</p>
+      </div>
     </div>
-    &copy; 2025 Aachal Shrestha. All rights reserved.
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Want to collaborate or hire me? Click the button below 👇</p>
+    <button onclick="showEmail()">Show Email</button>
+    <p id="email" style="display:none; margin-top:15px; font-weight:bold;">aachal@example.com</p>
+  </section>
+
+  <footer>
+    <p>© 2025 Aachal Shrestha | Portfolio</p>
   </footer>
+
+  <script>
+    function showEmail(){
+      document.getElementById("email").style.display = "block";
+    }
+  </script>
 </body>
 </html>
