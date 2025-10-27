@@ -13,31 +13,37 @@
 
     gtag('config', 'G-R8GH2Q2D24');
   </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: #0f172a;
       color: #e2e8f0;
     }
     header {
-      background: url('https://source.unsplash.com/1600x600/?coding,technology') center/cover no-repeat;
-      padding: 100px 20px;
+      background: linear-gradient(180deg, rgba(2,6,23,0.6), rgba(2,6,23,0.35)), url('https://source.unsplash.com/1600x600/?coding,technology') center/cover no-repeat;
+      padding: 72px 20px;
       text-align: center;
       position: relative;
+      color: #e6eef8;
     }
     header::after {
       content: '';
       position: absolute;
       top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(15, 23, 42, 0.7);
+      pointer-events: none;
     }
     header h1, header p {
       position: relative;
       z-index: 1;
     }
-    header h1 { font-size: 2.8em; margin: 0; }
-    header p { font-size: 1.2em; margin-top: 10px; }
+    header h1 { font-size: 2.2em; margin: 0 0 8px; font-weight:700; }
+    header p { font-size: 1.05em; margin: 0 0 18px; color: #cfe8ff; }
+    .header-cta { margin-top: 18px; display:flex; gap:12px; justify-content:center; }
+    .btn { display:inline-block; padding:10px 16px; border-radius:8px; background:#38bdf8; color:#052025; font-weight:600; text-decoration:none; box-shadow:0 6px 18px rgba(56,189,248,0.12); }
+    .btn:hover{ transform:translateY(-2px); }
+    .btn-outline { background: transparent; color: #cfe8ff; border:1px solid rgba(255,255,255,0.08); }
     nav {
       display: flex;
       justify-content: center;
@@ -54,25 +60,33 @@
     }
     nav a:hover { color: #38bdf8; }
     .profile-card {
-      background: #1e293b;
-      margin: -60px auto 40px;
-      max-width: 900px;
+      background: #0b1320;
+      margin: -48px auto 40px;
+      max-width: 1000px;
       border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
-      padding: 30px;
-      text-align: center;
+      box-shadow: 0 8px 30px rgba(2,6,23,0.6);
+      padding: 22px;
       position: relative;
       z-index: 10;
+      color: #cfe8ff;
     }
+    /* two column layout on wider screens */
+    .profile-inner { display:flex; align-items:center; gap:20px; flex-direction:column; text-align:center; }
+    @media(min-width:800px){ .profile-inner{ flex-direction:row; text-align:left; } }
     .profile-card img {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      border: 4px solid #38bdf8;
-      margin-bottom: 15px;
-      object-fit: cover;
-      background: #0b1220;
+      width: 140px;
+      height: 140px;
+      border-radius: 12px;
+      border-radius: 12px;
+      border: 3px solid rgba(56,189,248,0.12);
+      margin-bottom: 0;
+      object-fit:cover;
+      background: linear-gradient(135deg,#071226,#0b1220);
+      box-shadow: 0 6px 20px rgba(2,6,23,0.6);
     }
+    .profile-meta { flex:1 }
+    .profile-meta h2{ margin:0 0 6px; color:#e6f7ff }
+    .profile-meta p{ margin:6px 0; color:#9fb6cf }
     /* typewriter for subtitle */
     .typewriter {
       display: inline-block;
@@ -87,9 +101,10 @@
     .profile-card p { color: #94a3b8; margin: 5px 0; }
     .stats {
       display: flex;
-      justify-content: center;
-      gap: 40px;
-      margin-top: 20px;
+      justify-content: flex-start;
+      gap: 28px;
+      margin-top: 16px;
+      flex-wrap:wrap;
     }
     .stat {
       text-align: center;
@@ -113,35 +128,39 @@
     .skills span:hover { transform: scale(1.1); background: #38bdf8; color: #0f172a; }
     .projects {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 20px;
     }
     .card {
-      background: #1e293b;
+      background: linear-gradient(180deg,#081021,#0f172a);
       border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      box-shadow: 0 8px 18px rgba(2,6,23,0.6);
       padding: 20px;
-      transition: transform 0.3s;
+      transition: transform 0.28s, box-shadow 0.28s;
+      display:flex; flex-direction:column; gap:12px;
     }
-    .card:hover { transform: translateY(-5px); }
+    .card:hover { transform: translateY(-6px); box-shadow: 0 18px 40px rgba(2,6,23,0.65); }
+    .project-link { margin-top:auto; text-decoration:none; display:inline-block; padding:8px 12px; border-radius:8px; background:#1e293b; color:#cfe8ff; font-weight:600; }
+    .project-link:hover{ background:#38bdf8; color:#052025 }
     footer {
       text-align: center;
-      padding: 20px;
-      background: #1e293b;
-      color: #94a3b8;
-      margin-top: 40px;
+      padding: 24px 12px;
+      background: transparent;
+      color: #94b8cf;
+      margin-top: 48px;
+      border-top:1px solid rgba(255,255,255,0.03);
     }
     button {
       background: #38bdf8;
-      color: #0f172a;
-      padding: 10px 20px;
+      color: #052025;
+      padding: 8px 14px;
       border: none;
-      border-radius: 6px;
+      border-radius: 8px;
       cursor: pointer;
-      transition: 0.3s;
-      font-weight: bold;
+      transition: transform 0.2s, opacity 0.2s;
+      font-weight: 600;
     }
-    button:hover { background: #0ea5e9; color: white; }
+    button:hover { transform: translateY(-2px); opacity:0.95 }
   </style>
 </head>
 <body>
@@ -152,18 +171,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <header>
     <h1 id="main-name">Aachal Shrestha</h1>
     <p><span id="subtitle" class="typewriter">Full Stack Developer | Freelancer | Translator</span></p>
+    <div class="header-cta">
+      <a class="btn" href="https://github.com/aanchalshres" target="_blank" rel="noopener">View GitHub</a>
+      <a class="btn btn-outline" href="#contact">Contact</a>
+    </div>
   </header>
 
   <div class="profile-card">
-    <img id="profile-img" src="profile.jpg" alt="Aachal Profile">
-    <h2 id="profile-name">Aachal Shrestha</h2>
-    <p id="profile-location">Kathmandu, Nepal | 1+ years experience</p>
-    <p id="profile-bio">Versatile developer with skills in Laravel, C, C++, JS, and translation. Passionate about freelancing, IT projects, and delivering quality solutions.</p>
-    <div class="stats">
-      <div class="stat"><h3 id="stat-projects" data-target="10">0</h3><p>Projects</p></div>
-      <div class="stat"><h3 id="stat-tech" data-target="8">0</h3><p>Technologies</p></div>
-      <div class="stat"><h3 id="stat-exp" data-target="1">0</h3><p>Years Exp.</p></div>
-      <div class="stat"><h3 id="stat-hack" data-target="3">0</h3><p>Hackathons</p></div>
+    <div class="profile-inner">
+      <div class="profile-media">
+        <img id="profile-img" src="profile.jpg" alt="Aachal Profile">
+      </div>
+      <div class="profile-meta">
+        <h2 id="profile-name">Aachal Shrestha</h2>
+        <p id="profile-location">Kathmandu, Nepal | 1+ years experience</p>
+        <p id="profile-bio">Versatile developer with skills in Laravel, C, C++, JS, and translation. Passionate about freelancing, IT projects, and delivering quality solutions.</p>
+        <div class="stats">
+          <div class="stat"><h3 id="stat-projects" data-target="10">0</h3><p>Projects</p></div>
+          <div class="stat"><h3 id="stat-tech" data-target="8">0</h3><p>Technologies</p></div>
+          <div class="stat"><h3 id="stat-exp" data-target="1">0</h3><p>Years Exp.</p></div>
+          <div class="stat"><h3 id="stat-hack" data-target="3">0</h3><p>Hackathons</p></div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -199,18 +228,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="card">
         <h3>Deraa</h3>
         <p>A user-friendly rental platform connecting tenants with house owners, making renting easier and more secure.</p>
+        <a class="project-link" href="#">View</a>
       </div>
       <div class="card">
         <h3>Music Studio Hub</h3>
         <p>A web application for managing and promoting music studios, providing booking and collaboration features.</p>
+        <a class="project-link" href="#">View</a>
       </div>
       <div class="card">
         <h3>E-commerce Websites</h3>
         <p>Developed e-commerce solutions with user-friendly interfaces and secure transactions for online businesses.</p>
+        <a class="project-link" href="#">View</a>
       </div>
       <div class="card">
         <h3>Hackathon Projects</h3>
         <p>Participated in inter-college hackathons, working on web apps and presentations with a team.</p>
+        <a class="project-link" href="#">View</a>
       </div>
     </div>
   </section>
@@ -219,11 +252,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h2>Contact</h2>
     <p>Want to collaborate or hire me? Click the button below 👇</p>
     <button onclick="showEmail()">Show Email</button>
-    <p id="email" style="display:none; margin-top:15px; font-weight:bold;">aachal@example.com</p>
+    <p id="email" style="display:none; margin-top:15px; font-weight:bold;">
+      <a id="email-link" href="mailto:aachal.shres@gmail.co">aachal.shres@gmail.com</a>
+      <button id="copy-email" style="margin-left:10px; padding:6px 10px; font-size:0.9em;">Copy</button>
+    </p>
   </section>
 
   <footer>
-    <p>© 2025 Aachal Shrestha | Portfolio</p>
+    <p>© 2025 Aachal Shrestha | <a href="https://github.com/aanchalshres" target="_blank" rel="noopener" style="color:#cfe8ff; text-decoration:none;">GitHub</a></p>
   </footer>
 
   <script>
@@ -342,6 +378,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       // load GitHub profile and animate stats
       loadGitHubProfile();
+
+      // copy-to-clipboard for email button
+      const copyBtn = document.getElementById('copy-email');
+      if(copyBtn){
+        copyBtn.addEventListener('click', async ()=>{
+          const emailLink = document.getElementById('email-link');
+          const email = emailLink ? emailLink.textContent.trim() : 'aachal.shres@gmail.co';
+          // try clipboard API first
+          try{
+            await navigator.clipboard.writeText(email);
+            const original = copyBtn.textContent;
+            copyBtn.textContent = 'Copied!';
+            setTimeout(()=> copyBtn.textContent = original, 1400);
+          }catch(err){
+            // fallback method
+            const ta = document.createElement('textarea');
+            ta.value = email;
+            document.body.appendChild(ta);
+            ta.select();
+            try{ document.execCommand('copy'); copyBtn.textContent='Copied!'; setTimeout(()=>copyBtn.textContent='Copy',1400);}catch(e){ alert('Could not copy email. Here it is: ' + email); }
+            ta.remove();
+          }
+        });
+      }
     });
 
   </script>
