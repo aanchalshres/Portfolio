@@ -3,408 +3,296 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aachal Shrestha | Portfolio</title>
-   <!-- Google tag (gtag.js) -->
+  <title>Aachal Shrestha | Full Stack Developer & Translator</title>
+  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-R8GH2Q2D24"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-R8GH2Q2D24');
   </script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #0f172a;
-      color: #e2e8f0;
-    }
-    header {
-      background: linear-gradient(180deg, rgba(2,6,23,0.6), rgba(2,6,23,0.35)), url('https://source.unsplash.com/1600x600/?coding,technology') center/cover no-repeat;
-      padding: 72px 20px;
-      text-align: center;
-      position: relative;
-      color: #e6eef8;
-    }
-    header::after {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      pointer-events: none;
-    }
-    header h1, header p {
-      position: relative;
-      z-index: 1;
-    }
-    header h1 { font-size: 2.2em; margin: 0 0 8px; font-weight:700; }
-    header p { font-size: 1.05em; margin: 0 0 18px; color: #cfe8ff; }
-    .header-cta { margin-top: 18px; display:flex; gap:12px; justify-content:center; }
-    .btn { display:inline-block; padding:10px 16px; border-radius:8px; background:#38bdf8; color:#052025; font-weight:600; text-decoration:none; box-shadow:0 6px 18px rgba(56,189,248,0.12); }
-    .btn:hover{ transform:translateY(-2px); }
-    .btn-outline { background: transparent; color: #cfe8ff; border:1px solid rgba(255,255,255,0.08); }
-    nav {
-      display: flex;
-      justify-content: center;
-      background: #1e293b;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    nav a {
-      color: #e2e8f0;
-      text-decoration: none;
-      padding: 15px 20px;
-      transition: 0.3s;
-    }
-    nav a:hover { color: #38bdf8; }
-    .profile-card {
-      background: #0b1320;
-      margin: -48px auto 40px;
-      max-width: 1000px;
-      border-radius: 12px;
-      box-shadow: 0 8px 30px rgba(2,6,23,0.6);
-      padding: 22px;
-      position: relative;
-      z-index: 10;
-      color: #cfe8ff;
-    }
-    /* two column layout on wider screens */
-    .profile-inner { display:flex; align-items:center; gap:20px; flex-direction:column; text-align:center; }
-    @media(min-width:800px){ .profile-inner{ flex-direction:row; text-align:left; } }
-    .profile-card img {
-      width: 140px;
-      height: 140px;
-      border-radius: 12px;
-      border-radius: 12px;
-      border: 3px solid rgba(56,189,248,0.12);
-      margin-bottom: 0;
-      object-fit:cover;
-      background: linear-gradient(135deg,#071226,#0b1220);
-      box-shadow: 0 6px 20px rgba(2,6,23,0.6);
-    }
-    .profile-meta { flex:1 }
-    .profile-meta h2{ margin:0 0 6px; color:#e6f7ff }
-    .profile-meta p{ margin:6px 0; color:#9fb6cf }
-    /* typewriter for subtitle */
-    .typewriter {
-      display: inline-block;
-      border-right: 2px solid #38bdf8;
-      white-space: nowrap;
-      overflow: hidden;
-      vertical-align: middle;
-    }
-    /* simple number animation */
-    .stat h3 { transition: all 0.6s; }
-    .profile-card h2 { margin: 10px 0 5px; }
-    .profile-card p { color: #94a3b8; margin: 5px 0; }
-    .stats {
-      display: flex;
-      justify-content: flex-start;
-      gap: 28px;
-      margin-top: 16px;
-      flex-wrap:wrap;
-    }
-    .stat {
-      text-align: center;
-    }
-    .stat h3 { color: #38bdf8; margin: 0; font-size: 1.5em; }
-    section {
-      max-width: 1000px;
-      margin: auto;
-      padding: 40px 20px;
-    }
-    h2 { color: #38bdf8; margin-bottom: 20px; }
-    .skills span {
-      display: inline-block;
-      background: #334155;
-      color: #e2e8f0;
-      padding: 8px 14px;
-      margin: 6px;
-      border-radius: 20px;
-      transition: transform 0.2s, background 0.3s;
-    }
-    .skills span:hover { transform: scale(1.1); background: #38bdf8; color: #0f172a; }
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
-    }
-    .card {
-      background: linear-gradient(180deg,#081021,#0f172a);
-      border-radius: 12px;
-      box-shadow: 0 8px 18px rgba(2,6,23,0.6);
-      padding: 20px;
-      transition: transform 0.28s, box-shadow 0.28s;
-      display:flex; flex-direction:column; gap:12px;
-    }
-    .card:hover { transform: translateY(-6px); box-shadow: 0 18px 40px rgba(2,6,23,0.65); }
-    .project-link { margin-top:auto; text-decoration:none; display:inline-block; padding:8px 12px; border-radius:8px; background:#1e293b; color:#cfe8ff; font-weight:600; }
-    .project-link:hover{ background:#38bdf8; color:#052025 }
-    footer {
-      text-align: center;
-      padding: 24px 12px;
-      background: transparent;
-      color: #94b8cf;
-      margin-top: 48px;
-      border-top:1px solid rgba(255,255,255,0.03);
-    }
-    button {
-      background: #38bdf8;
-      color: #052025;
-      padding: 8px 14px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: transform 0.2s, opacity 0.2s;
-      font-weight: 600;
-    }
-    button:hover { transform: translateY(-2px); opacity:0.95 }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MFQWHLGL"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-  <header>
-    <h1 id="main-name">Aachal Shrestha</h1>
-    <p><span id="subtitle" class="typewriter">Full Stack Developer | Freelancer | Translator</span></p>
-    <div class="header-cta">
-      <a class="btn" href="https://github.com/aanchalshres" target="_blank" rel="noopener">View GitHub</a>
-      <a class="btn btn-outline" href="#contact">Contact</a>
-    </div>
-  </header>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MFQWHLGL" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
-  <div class="profile-card">
-    <div class="profile-inner">
-      <div class="profile-media">
-        <img id="profile-img" src="profile.jpg" alt="Aachal Profile">
-      </div>
-      <div class="profile-meta">
-        <h2 id="profile-name">Aachal Shrestha</h2>
-        <p id="profile-location">Kathmandu, Nepal | 1+ years experience</p>
-        <p id="profile-bio">Versatile developer with skills in Laravel, C, C++, JS, and translation. Passionate about freelancing, IT projects, and delivering quality solutions.</p>
-        <div class="stats">
-          <div class="stat"><h3 id="stat-projects" data-target="10">0</h3><p>Projects</p></div>
-          <div class="stat"><h3 id="stat-tech" data-target="8">0</h3><p>Technologies</p></div>
-          <div class="stat"><h3 id="stat-exp" data-target="1">0</h3><p>Years Exp.</p></div>
-          <div class="stat"><h3 id="stat-hack" data-target="3">0</h3><p>Hackathons</p></div>
+  <!-- Header Section -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <h1 id="main-name">Aachal Shrestha</h1>
+        <p><span id="subtitle" class="typewriter">Full Stack Developer | Freelancer | Translator</span></p>
+        <div class="header-cta">
+          <a class="btn btn-primary" href="https://github.com/aanchalshres" target="_blank" rel="noopener">
+            <i class="fab fa-github"></i> View GitHub
+          </a>
+          <a class="btn btn-outline" href="#contact">
+            <i class="fas fa-envelope"></i> Contact Me
+          </a>
         </div>
       </div>
     </div>
-  </div>
+    <div class="scroll-indicator">
+      <a href="#profile"><i class="fas fa-chevron-down"></i></a>
+    </div>
+  </header>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
+  <!-- Profile Section -->
+  <section id="profile" class="profile-section">
+    <div class="container">
+      <div class="profile-card">
+        <div class="profile-inner">
+          <div class="profile-media">
+            <div class="profile-img-container">
+              <img id="profile-img" src="profile.jpg" alt="Aachal Shrestha">
+              <div class="profile-status">
+                <span class="status-dot"></span>
+                <span>Available for work</span>
+              </div>
+            </div>
+          </div>
+          <div class="profile-meta">
+            <h2 id="profile-name">Aachal Shrestha</h2>
+            <p id="profile-location"><i class="fas fa-map-marker-alt"></i> Kathmandu, Nepal | 1+ years experience</p>
+            <p id="profile-bio">Versatile developer with skills in Laravel, C, C++, JS, and translation. Passionate about freelancing, IT projects, and delivering quality solutions.</p>
+            <div class="stats">
+              <div class="stat">
+                <h3 id="stat-projects" data-target="10">0</h3>
+                <p>Projects</p>
+              </div>
+              <div class="stat">
+                <h3 id="stat-tech" data-target="8">0</h3>
+                <p>Technologies</p>
+              </div>
+              <div class="stat">
+                <h3 id="stat-exp" data-target="1">0</h3>
+                <p>Years Exp.</p>
+              </div>
+              <div class="stat">
+                <h3 id="stat-hack" data-target="3">0</h3>
+                <p>Hackathons</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="nav-links">
+        <a href="#about"><i class="fas fa-user"></i> About</a>
+        <a href="#skills"><i class="fas fa-code"></i> Skills</a>
+        <a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a>
+        <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+      </div>
+    </div>
   </nav>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      I'm a Computer Science student and freelancer with expertise in coding (HTML, CSS, JS, C, C++, Laravel), 
-      translation (English, Nepali, Hindi), MS Office tasks, and tutoring. I’ve worked on projects like
-      <strong>Deraa</strong> (a rental platform), <strong>Music Studio Hub</strong>, and <strong>eCommerce websites</strong>.
-      My goal is to grow in IT and provide reliable services to clients.
-    </p>
-  </section>
-
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="skills">
-      <span>HTML</span><span>CSS</span><span>JavaScript</span><span>C</span><span>C++</span>
-      <span>Laravel</span><span>Translation</span><span>MS Office</span><span>Tutoring</span><span>WordPress</span>
-      <span>Subtitle QC</span><span>Freelancing</span>
-    </div>
-  </section>
-
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="projects">
-      <div class="card">
-        <h3>Deraa</h3>
-        <p>A user-friendly rental platform connecting tenants with house owners, making renting easier and more secure.</p>
-        <a class="project-link" href="#">View</a>
-      </div>
-      <div class="card">
-        <h3>Music Studio Hub</h3>
-        <p>A web application for managing and promoting music studios, providing booking and collaboration features.</p>
-        <a class="project-link" href="#">View</a>
-      </div>
-      <div class="card">
-        <h3>E-commerce Websites</h3>
-        <p>Developed e-commerce solutions with user-friendly interfaces and secure transactions for online businesses.</p>
-        <a class="project-link" href="#">View</a>
-      </div>
-      <div class="card">
-        <h3>Hackathon Projects</h3>
-        <p>Participated in inter-college hackathons, working on web apps and presentations with a team.</p>
-        <a class="project-link" href="#">View</a>
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p>
+            I'm a Computer Science student and freelancer with expertise in coding (HTML, CSS, JS, C, C++, Laravel), 
+            translation (English, Nepali, Hindi), MS Office tasks, and tutoring. I've worked on projects like
+            <strong>Deraa</strong> (a rental platform), <strong>Music Studio Hub</strong>, and <strong>eCommerce websites</strong>.
+            My goal is to grow in IT and provide reliable services to clients.
+          </p>
+          <div class="about-highlights">
+            <div class="highlight">
+              <i class="fas fa-graduation-cap"></i>
+              <div>
+                <h4>Computer Science Student</h4>
+                <p>Currently pursuing my degree in Computer Science</p>
+              </div>
+            </div>
+            <div class="highlight">
+              <i class="fas fa-language"></i>
+              <div>
+                <h4>Multilingual Translator</h4>
+                <p>English, Nepali, Hindi translation services</p>
+              </div>
+            </div>
+            <div class="highlight">
+              <i class="fas fa-laptop-code"></i>
+              <div>
+                <h4>Freelance Developer</h4>
+                <p>Building solutions for clients worldwide</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Want to collaborate or hire me? Click the button below 👇</p>
-    <button onclick="showEmail()">Show Email</button>
-    <p id="email" style="display:none; margin-top:15px; font-weight:bold;">
-      <a id="email-link" href="mailto:aachal.shres@gmail.co">aachal.shres@gmail.com</a>
-      <button id="copy-email" style="margin-left:10px; padding:6px 10px; font-size:0.9em;">Copy</button>
-    </p>
+  <!-- Skills Section -->
+  <section id="skills" class="section section-dark">
+    <div class="container">
+      <h2 class="section-title">Skills & Expertise</h2>
+      <div class="skills-container">
+        <div class="skill-category">
+          <h3><i class="fas fa-code"></i> Development</h3>
+          <div class="skills">
+            <span class="skill-tag">HTML</span>
+            <span class="skill-tag">CSS</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">C</span>
+            <span class="skill-tag">C++</span>
+            <span class="skill-tag">Laravel</span>
+            <span class="skill-tag">WordPress</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3><i class="fas fa-language"></i> Translation</h3>
+          <div class="skills">
+            <span class="skill-tag">English</span>
+            <span class="skill-tag">Nepali</span>
+            <span class="skill-tag">Hindi</span>
+            <span class="skill-tag">Subtitle QC</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3><i class="fas fa-tools"></i> Other Skills</h3>
+          <div class="skills">
+            <span class="skill-tag">MS Office</span>
+            <span class="skill-tag">Tutoring</span>
+            <span class="skill-tag">Freelancing</span>
+            <span class="skill-tag">Project Management</span>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <footer>
-    <p>© 2025 Aachal Shrestha | <a href="https://github.com/aanchalshres" target="_blank" rel="noopener" style="color:#cfe8ff; text-decoration:none;">GitHub</a></p>
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="section-title">My Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-icon">
+            <i class="fas fa-home"></i>
+          </div>
+          <h3>Deraa</h3>
+          <p>A user-friendly rental platform connecting tenants with house owners, making renting easier and more secure.</p>
+          <div class="project-tech">
+            <span>Laravel</span>
+            <span>JavaScript</span>
+            <span>MySQL</span>
+          </div>
+          <a class="project-link" href="#">
+            <i class="fas fa-external-link-alt"></i> View Project
+          </a>
+        </div>
+        <div class="project-card">
+          <div class="project-icon">
+            <i class="fas fa-music"></i>
+          </div>
+          <h3>Music Studio Hub</h3>
+          <p>A web application for managing and promoting music studios, providing booking and collaboration features.</p>
+          <div class="project-tech">
+            <span>HTML/CSS</span>
+            <span>JavaScript</span>
+            <span>PHP</span>
+          </div>
+          <a class="project-link" href="#">
+            <i class="fas fa-external-link-alt"></i> View Project
+          </a>
+        </div>
+        <div class="project-card">
+          <div class="project-icon">
+            <i class="fas fa-shopping-cart"></i>
+          </div>
+          <h3>E-commerce Websites</h3>
+          <p>Developed e-commerce solutions with user-friendly interfaces and secure transactions for online businesses.</p>
+          <div class="project-tech">
+            <span>WordPress</span>
+            <span>WooCommerce</span>
+            <span>PHP</span>
+          </div>
+          <a class="project-link" href="#">
+            <i class="fas fa-external-link-alt"></i> View Project
+          </a>
+        </div>
+        <div class="project-card">
+          <div class="project-icon">
+            <i class="fas fa-trophy"></i>
+          </div>
+          <h3>Hackathon Projects</h3>
+          <p>Participated in inter-college hackathons, working on web apps and presentations with a team.</p>
+          <div class="project-tech">
+            <span>Teamwork</span>
+            <span>Problem Solving</span>
+            <span>Web Development</span>
+          </div>
+          <a class="project-link" href="#">
+            <i class="fas fa-external-link-alt"></i> View Project
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section section-dark">
+    <div class="container">
+      <h2 class="section-title">Get In Touch</h2>
+      <div class="contact-content">
+        <div class="contact-info">
+          <p>Want to collaborate or hire me? Feel free to reach out!</p>
+          <div class="contact-methods">
+            <div class="contact-method">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <h4>Email</h4>
+                <p id="email-display">aachal.shres@gmail.com</p>
+                <button id="copy-email" class="btn-copy">
+                  <i class="fas fa-copy"></i> Copy Email
+                </button>
+              </div>
+            </div>
+            <div class="contact-method">
+              <i class="fab fa-github"></i>
+              <div>
+                <h4>GitHub</h4>
+                <p>github.com/aanchalshres</p>
+                <a href="https://github.com/aanchalshres" target="_blank" class="btn btn-outline">
+                  Visit Profile
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 Aachal Shrestha | Full Stack Developer & Translator</p>
+      <div class="social-links">
+        <a href="https://github.com/aanchalshres" target="_blank" rel="noopener">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="mailto:aachal.shres@gmail.com">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+    </div>
   </footer>
 
-  <script>
-    // Assumption: GitHub username is the repo owner 'aanchalshres'.
-    const GITHUB_USERNAME = 'aanchalshres';
-
-    async function loadGitHubProfile(username = GITHUB_USERNAME){
-      try {
-        const res = await fetch(`https://api.github.com/users/${username}`);
-        if(!res.ok) throw new Error('GitHub user not found');
-        const data = await res.json();
-
-        // update image (use higher size if available)
-        const img = document.getElementById('profile-img');
-        if(img && data.avatar_url) img.src = data.avatar_url + (data.avatar_url.includes("s=") ? '' : '&s=400');
-
-        // update text fields
-        const nameEl = document.getElementById('profile-name');
-        if(nameEl) nameEl.textContent = data.name || data.login || nameEl.textContent;
-
-        const locEl = document.getElementById('profile-location');
-        if(locEl) locEl.textContent = (data.location ? data.location + ' | ' : '') + (data.company ? data.company : '');
-        if(!locEl.textContent) locEl.textContent = 'Kathmandu, Nepal | 1+ years experience';
-
-        const bioEl = document.getElementById('profile-bio');
-        if(bioEl) bioEl.textContent = data.bio || bioEl.textContent;
-
-        // animate project count using public_repos
-        const projectsEl = document.getElementById('stat-projects');
-        if(projectsEl) animateNumber(projectsEl, data.public_repos || parseInt(projectsEl.dataset.target || '0'));
-
-        // other stats - keep existing targets but animate
-        const techEl = document.getElementById('stat-tech');
-        const expEl = document.getElementById('stat-exp');
-        const hackEl = document.getElementById('stat-hack');
-        if(techEl) animateNumber(techEl, parseInt(techEl.dataset.target || '8'));
-        if(expEl) animateNumber(expEl, parseInt(expEl.dataset.target || '1'));
-        if(hackEl) animateNumber(hackEl, parseInt(hackEl.dataset.target || '3'));
-
-      } catch (err) {
-        // on error, leave local profile.jpg as fallback and still animate default stats
-        console.warn('Could not load GitHub profile:', err.message);
-        const techEl = document.getElementById('stat-tech');
-        const expEl = document.getElementById('stat-exp');
-        const hackEl = document.getElementById('stat-hack');
-        const projectsEl = document.getElementById('stat-projects');
-        if(projectsEl) animateNumber(projectsEl, parseInt(projectsEl.dataset.target || '10'));
-        if(techEl) animateNumber(techEl, parseInt(techEl.dataset.target || '8'));
-        if(expEl) animateNumber(expEl, parseInt(expEl.dataset.target || '1'));
-        if(hackEl) animateNumber(hackEl, parseInt(hackEl.dataset.target || '3'));
-      }
-    }
-
-    function animateNumber(el, target){
-      target = Number(target) || 0;
-      const start = 0;
-      const duration = 800; // ms
-      const frameRate = 30;
-      const totalFrames = Math.round(duration / (1000 / frameRate));
-      let frame = 0;
-      const counter = setInterval(()=>{
-        frame++;
-        const progress = frame / totalFrames;
-        const value = Math.round(start + (target - start) * easeOutCubic(progress));
-        el.textContent = value;
-        if(frame >= totalFrames){
-          clearInterval(counter);
-          el.textContent = target + (el.dataset.suffix || '');
-        }
-      }, 1000 / frameRate);
-    }
-
-    function easeOutCubic(t){ return (--t)*t*t+1 }
-
-    // Typewriter effect for the subtitle
-    function startTypewriter(elId, phrases, delayBetween = 1800){
-      const el = document.getElementById(elId);
-      if(!el || !phrases || !phrases.length) return;
-      let idx = 0; let pos = 0; let forward = true;
-      function step(){
-        const current = phrases[idx];
-        if(forward){
-          pos++;
-          el.textContent = current.slice(0,pos);
-          if(pos === current.length){ forward = false; setTimeout(step, delayBetween); return; }
-        } else {
-          pos--;
-          el.textContent = current.slice(0,pos);
-          if(pos === 0){ forward = true; idx = (idx+1) % phrases.length; }
-        }
-        setTimeout(step, forward ? 80 : 40);
-      }
-      step();
-    }
-
-    function showEmail(){
-      const emailEl = document.getElementById('email');
-      const btn = document.querySelector('#contact button');
-      if(emailEl.style.display === 'block'){
-        emailEl.style.display = 'none';
-        if(btn) btn.textContent = 'Show Email';
-      } else {
-        emailEl.style.display = 'block';
-        if(btn) btn.textContent = 'Hide Email';
-      }
-    }
-
-    // init on DOMContentLoaded
-    document.addEventListener('DOMContentLoaded', ()=>{
-      // start typewriter with a few variants
-      startTypewriter('subtitle', [
-        'Full Stack Developer',
-        'Freelancer • Translator',
-        'Laravel • JS • C/C++'
-      ], 1600);
-
-      // load GitHub profile and animate stats
-      loadGitHubProfile();
-
-      // copy-to-clipboard for email button
-      const copyBtn = document.getElementById('copy-email');
-      if(copyBtn){
-        copyBtn.addEventListener('click', async ()=>{
-          const emailLink = document.getElementById('email-link');
-          const email = emailLink ? emailLink.textContent.trim() : 'aachal.shres@gmail.co';
-          // try clipboard API first
-          try{
-            await navigator.clipboard.writeText(email);
-            const original = copyBtn.textContent;
-            copyBtn.textContent = 'Copied!';
-            setTimeout(()=> copyBtn.textContent = original, 1400);
-          }catch(err){
-            // fallback method
-            const ta = document.createElement('textarea');
-            ta.value = email;
-            document.body.appendChild(ta);
-            ta.select();
-            try{ document.execCommand('copy'); copyBtn.textContent='Copied!'; setTimeout(()=>copyBtn.textContent='Copy',1400);}catch(e){ alert('Could not copy email. Here it is: ' + email); }
-            ta.remove();
-          }
-        });
-      }
-    });
-
-  </script>
- 
+  <script src="script.js"></script>
 </body>
 </html>
