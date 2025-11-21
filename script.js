@@ -151,4 +151,40 @@ function setupSmoothScrolling() {
       if (targetElement) {
         window.scrollTo({
           top: targetElement.offsetTop - 80,
-         
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+}
+
+// Initialize on DOMContentLoaded
+document.addEventListener('DOMContentLoaded', () => {
+  // Start typewriter with a few variants
+  startTypewriter('subtitle', [
+    'Full Stack Developer',
+    'Freelancer • Translator',
+    'Laravel • JS • C/C++'
+  ], 1600);
+
+  // Load GitHub profile and animate stats
+  loadGitHubProfile();
+
+  // Setup email copy functionality
+  setupEmailCopy();
+
+  // Setup smooth scrolling
+  setupSmoothScrolling();
+
+  // Add scroll effect to navbar
+  window.addEventListener('scroll', () => {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 100) {
+      navbar.style.background = 'rgba(30, 41, 59, 0.95)';
+      navbar.style.backdropFilter = 'blur(10px)';
+    } else {
+      navbar.style.background = 'var(--dark-light)';
+      navbar.style.backdropFilter = 'none';
+    }
+  });
+});
