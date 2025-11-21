@@ -1,5 +1,14 @@
 // Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
+  // Fetch GitHub avatar dynamically
+  fetch('https://api.github.com/users/aanchalshres')
+    .then(res => res.json())
+    .then(data => {
+      const img = document.getElementById('profile-img');
+      if (img && data.avatar_url) img.src = data.avatar_url;
+    })
+    .catch(() => {/* fallback: keep existing src */});
+
   // Initialize all functionality
   initTypewriter();
   initCounterAnimation();
