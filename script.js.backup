@@ -193,6 +193,20 @@ function initScrollEffects() {
     });
   });
 }
+      }
+    });
+  }, observerOptions);
+  
+  // Observe elements for animation
+  const elementsToAnimate = document.querySelectorAll(
+    '.profile-card, .about-highlights, .skill-category, .project-card, .contact-method'
+  );
+  
+  elementsToAnimate.forEach(el => {
+    el.classList.add('fade-element');
+    observer.observe(el);
+  });
+}
 
 // Email copy functionality
 function initEmailCopy() {
@@ -246,34 +260,7 @@ function showCopyFeedback(button, message) {
   const originalText = button.innerHTML;
   button.innerHTML = `<i class="fas fa-check"></i> ${message}`;
   
-  setTimeout(() => {
-    button.innerHTML = originalText;
-  }, 2000);
-}
-
-// Smooth scrolling for anchor links
-function initSmoothScrolling() {
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      e.preventDefault();
-      
-      const targetId = this.getAttribute('href');
-      if (targetId === '#') return;
-      
-      const targetElement = document.querySelector(targetId);
-      if (targetElement) {
-        const offsetTop = targetElement.offsetTop - 80; // Account for fixed navbar
-        
-        window.scrollTo({
-          top: offsetTop,
-          behavior: 'smooth'
-        });
-      }
-    });
-  });
-}
-
-// Add CSS for animations
+  setTimeout(()animations
 const style = document.createElement('style');
 style.textContent = `
   .fade-element {
@@ -292,20 +279,74 @@ style.textContent = `
     color: white;
     box-shadow: var(--shadow);
   }
+  
+  /* Glowing cursor effect */
+  body::after {
+    content: '';
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 107, 157, 0.3), transparent);
+    pointer-events: none;
+    z-index: 9999;
+    transition: transform 0.1s ease;
+  }
 `;
 document.head.appendChild(style);
 
-// Add interactive emoji reactions on hover
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.stat').forEach(stat => {
-    stat.addEventListener('mouseenter', function() {
-      const icon = this.querySelector('.stat-icon');
-      if (icon) {
-        icon.style.transform = 'scale(1.3) rotate(20deg)';
-        setTimeout(() => {
-          icon.style.transform = '';
-        }, 300);
+// Add glowing cursor follower
+let mouseX = 0;
+let mouseY = 0;
+let cursorX = 0;
+let cursorY = 0;
+
+document.addEventListener('mousemove', (e) => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+});
+
+function animateCursor() {
+  const diffX = mouseX - cursorX;
+  const diffY = mouseY - cursorY;
+  
+  cursorX += diffX * 0.1;
+  cursorY += diffY * 0.1;
+  
+  const cursor = document.querySelector('body::after');
+  if (cursor) {
+    document.body.style.setProperty('--cursor-x', `${cursorX}px`);
+    document.body.style.setProperty('--cursor-y', `${cursorY}px`);
+  }
+  
+  requestAnimationFrame(animateCursor);
+}
+
+animateCursor(
+          behavior: 'smooth'
+        });
       }
     });
   });
-});
+}
+
+// Add CSS for fade-in animation
+const style = document.createElement('style');
+style.textContent = `
+  .fade-element {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  
+  .fade-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .nav-links a.active {
+    background-color: var(--primary);
+    color: white;
+  }
+`;
+document.head.appendChild(style);
