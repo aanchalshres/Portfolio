@@ -1,20 +1,22 @@
 // Confine particles to hero, respect reduced motion
 document.addEventListener('DOMContentLoaded', () => {
   const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
   const hero = document.querySelector('.hero');
   const particles = document.getElementById('particles-js');
   if (hero && particles) hero.appendChild(particles);
 
   if (!prefersReduced && window.particlesJS) {
+    const particleColor = isDark ? '#dcd6ff' : '#9e8cf3';
     particlesJS('particles-js', {
       particles: {
-        number: { value: 40, density: { enable: true, value_area: 900 } },
-        color: { value: '#ffffff' },
+        number: { value: 45, density: { enable: true, value_area: 900 } },
+        color: { value: particleColor },
         shape: { type: 'circle' },
-        opacity: { value: 0.35 },
+        opacity: { value: 0.4 },
         size: { value: 2, random: true },
-        line_linked: { enable: true, distance: 140, color: '#ffffff', opacity: 0.25, width: 1 },
-        move: { enable: true, speed: 1.2, out_mode: 'out' }
+        line_linked: { enable: true, distance: 140, color: particleColor, opacity: 0.28, width: 1 },
+        move: { enable: true, speed: 1.1, out_mode: 'out' }
       },
       interactivity: {
         detect_on: 'canvas',
