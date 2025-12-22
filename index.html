@@ -1,332 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aachal Shrestha | Full Stack Developer & Translator</title>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-R8GH2Q2D24"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-R8GH2Q2D24');
-  </script>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aachal Shrestha | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MFQWHLGL" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
+    <div id="particles-js"></div>
 
-  <!-- Header Section -->
-  <header class="header">
-    <div class="sparkles-container"></div>
-    <div class="floating-shapes">
-      <div class="shape shape-1"></div>
-      <div class="shape shape-2"></div>
-      <div class="shape shape-3"></div>
-      <div class="shape shape-4"></div>
-      <div class="shape shape-5"></div>
-      <div class="shape shape-6"></div>
-    </div>
-    <div class="container">
-      <div class="header-content">
-        <div class="hello-badge">Hello, I'm</div>
-        <h1 id="main-name">Aachal Shrestha</h1>
-        <p><span id="subtitle" class="typewriter">Full Stack Developer | Freelancer</span></p>
-        <p class="header-tagline">Crafting beautiful digital experiences with code & creativity</p>
-        <div class="header-cta">
-          <a class="btn btn-primary" href="https://github.com/aanchalshres" target="_blank" rel="noopener">
-            <i class="fab fa-github"></i> View GitHub
-          </a>
-          <a class="btn btn-outline" href="#contact">
-            <i class="fas fa-envelope"></i> Let's Connect
-          </a>
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">Aachal</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
-      </div>
-    </div>
-    <div class="scroll-indicator">
-      <a href="#profile">
-        <span class="scroll-text">Scroll to explore</span>
-        <i class="fas fa-chevron-down"></i>
-      </a>
-    </div>
-  </header>
+    </nav>
 
-  <!-- Profile Section -->
-  <section id="profile" class="profile-section">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-subtitle">Get to know me</h2>
-      </div>
-      <div class="profile-card">
-        <div class="profile-inner">
-          <div class="profile-media">
-            <div class="profile-img-container">
-              <div class="profile-ring"></div>
-              <img id="profile-img" src="https://avatars.githubusercontent.com/u/111445407?v=4" alt="Aachal Shrestha" onerror="this.onerror=null;this.src='alogoc.png';">
-              <div class="profile-status">
-                <span class="status-dot"></span>
-                <span>Available for work</span>
-              </div>
+    <header class="hero">
+        <div class="container">
+            <h1>Aachal Shrestha</h1>
+            <p>Full Stack Developer & Tech Enthusiast</p>
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <img src="https://avatars.githubusercontent.com/u/111445407?v=4" alt="Aachal Shrestha" class="profile-pic">
+                <p>I'm a passionate developer with a love for creating beautiful and functional web experiences. My expertise lies in building modern, responsive websites and applications. I'm always eager to learn new technologies and take on challenging projects.</p>
             </div>
-          </div>
-          <div class="profile-meta">
-            <h2 id="profile-name">Aachal Shrestha</h2>
-            <p id="profile-location"><i class="fas fa-map-marker-alt"></i> Kathmandu, Nepal | 1+ years experience</p>
-            <p id="profile-bio">Versatile developer with skills in Laravel, JS, Node.js, MySQL. Passionate about freelancing, IT projects, and delivering quality solutions with a touch of creativity!</p>
-            <div class="stats">
-              <div class="stat">
-                <div class="stat-icon"><i class="fas fa-rocket"></i></div>
-                <h3 id="stat-projects" data-target="5">0</h3>
-                <p>Projects</p>
-              </div>
-              <div class="stat">
-                <div class="stat-icon"><i class="fas fa-code"></i></div>
-                <h3 id="stat-tech" data-target="10">0</h3>
-                <p>Technologies</p>
-              </div>
-              <div class="stat">
-                <div class="stat-icon"><i class="fas fa-star"></i></div>
-                <h3 id="stat-exp" data-target="1">0</h3>
-                <p>Years Exp.</p>
-              </div>
-              <div class="stat">
-                <div class="stat-icon"><i class="fas fa-trophy"></i></div>
-                <h3 id="stat-hack" data-target="2">0</h3>
-                <p>Hackathons</p>
-              </div>
+        </section>
+
+        <section id="skills" class="container">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="fab fa-laravel"></i>
+                    <h3>Laravel</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-js-square"></i>
+                    <h3>JavaScript</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-node-js"></i>
+                    <h3>Node.js</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-database"></i>
+                    <h3>MySQL</h3>
+                </div>
+                 <div class="skill-card">
+                    <i class="fab fa-react"></i>
+                    <h3>React</h3>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+        </section>
 
-  <!-- Navigation -->
-  <nav class="navbar">
-    <div class="container">
-      <div class="nav-links">
-        <a href="#about"><i class="fas fa-user"></i> About</a>
-        <a href="#skills"><i class="fas fa-code"></i> Skills</a>
-        <a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a>
-        <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
-      </div>
-    </div>
-  </nav>
-
-  <!-- About Section -->
-  <section id="about" class="section">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">About Me</h2>
-      </div>
-      <div class="about-content">
-        <div class="about-text">
-          <p class="about-intro">
-            I'm a Computer Science student and freelance developer specializing in Laravel, MySQL, JavaScript, and Node.js. I build clean, scalable, and efficient web applications with a strong focus on backend development and modern full-stack workflows.
-            Passionate about writing maintainable code, improving system performance, and creating reliable digital solutions, I'm continuously learning and growing as a developer in the world of modern web technologies.
-          </p>
-          <div class="about-highlights">
-            <div class="highlight">
-              <div class="highlight-icon"><i class="fas fa-graduation-cap"></i></div>
-              <div>
-                <h4>Computer Science Student</h4>
-                <p>Currently pursuing my degree in Computer Science</p>
-              </div>
+        <section id="projects" class="container">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Deraa - Rental Platform</h3>
+                    <p>A user-friendly rental platform connecting tenants with house owners.</p>
+                    <a href="#" class="btn">View Project</a>
+                </div>
+                <div class="project-card">
+                    <h3>Thriftsy - E-commerce</h3>
+                    <p>A modern thrift marketplace to browse, list, and purchase items.</p>
+                    <a href="https://thriftsy.vercel.app" target="_blank" class="btn">View Project</a>
+                </div>
+                <div class="project-card">
+                    <h3>Medipal - Hackathon Project</h3>
+                    <p>A medical assistance web application built with a team.</p>
+                    <a href="#" class="btn">View Project</a>
+                </div>
             </div>
-            <div class="highlight">
-              <div class="highlight-icon"><i class="fas fa-globe"></i></div>
-              <div>
-                <h4>Multilingual Translator</h4>
-                <p>English, Nepali, Hindi translation services</p>
-              </div>
-            </div>
-            <div class="highlight">
-              <div class="highlight-icon"><i class="fas fa-laptop-code"></i></div>
-              <div>
-                <h4>Freelance Developer</h4>
-                <p>Building solutions for clients worldwide</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+        </section>
 
-  <!-- Skills Section -->
-  <section id="skills" class="section section-gradient">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Skills & Expertise</h2>
-        <p class="section-desc">The tools & technologies I love working with</p>
-      </div>
-      <div class="skills-container">
-        <div class="skill-category">
-          <h3><span class="category-icon"><i class="fas fa-code"></i></span> Development</h3>
-          <div class="skills">
-            <span class="skill-tag">HTML</span>
-            <span class="skill-tag">CSS</span>
-            <span class="skill-tag">JavaScript</span>
-            <span class="skill-tag">C/C++</span>
-            <span class="skill-tag">C#</span>
-            <span class="skill-tag">Laravel</span>
-            <span class="skill-tag">Node.js</span>
-            <span class="skill-tag">Express.js</span>
-            <span class="skill-tag">MySQL</span>
-            <span class="skill-tag">WordPress</span>
-          </div>
-        </div>
-        <div class="skill-category">
-          <h3><span class="category-icon"><i class="fas fa-tools"></i></span> Other Skills</h3>
-          <div class="skills">
-            <span class="skill-tag">MS Office</span>
-            <span class="skill-tag">Freelancing</span>
-            <span class="skill-tag">Project Management</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+        <section id="contact" class="container">
+            <h2>Contact</h2>
+            <p>Feel free to reach out for collaborations or just a friendly chat!</p>
+            <a href="mailto:aachal.shres@gmail.com" class="btn">Email Me</a>
+        </section>
+    </main>
 
-  <!-- Projects Section -->
-  <section id="projects" class="section">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">My Projects</h2>
-        <p class="section-desc">Some of my favorite works I've built</p>
-      </div>
-      <div class="projects-grid">
-        <div class="project-card">
-          <div class="project-badge">Featured</div>
-          <div class="project-icon">
-            <i class="fas fa-home"></i>
-          </div>
-          <h3>Deraa</h3>
-          <p>A user-friendly rental platform connecting tenants with house owners, making renting easier and more secure.</p>
-          <div class="project-tech">
-            <span>WordPress</span>
-          </div>
-          <a class="project-link" href="#">
-            <i class="fas fa-arrow-right"></i> View Project
-          </a>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Aachal Shrestha. All Rights Reserved.</p>
         </div>
+    </footer>
 
-        <div class="project-card">
-          <div class="project-badge">Favorite</div>
-          <div class="project-icon">
-            <i class="fas fa-shopping-bag"></i>
-          </div>
-          <h3>Thriftsy</h3>
-          <p>
-            A modern thrift marketplace platform built in collaboration, allowing users to browse, list, and purchase items with a smooth and intuitive interface.
-          </p>
-          <div class="project-tech">
-            <span>React</span>
-            <span>Node.js</span>
-            <span>Express</span>
-            <span>MySQL</span>
-          </div>
-          <a class="project-link" href="https://thriftsy.vercel.app" target="_blank">
-            <i class="fas fa-arrow-right"></i> View Project
-          </a>
-        </div>
-
-        <div class="project-card">
-          <div class="project-icon">
-            <i class="fas fa-shopping-cart"></i>
-          </div>
-          <h3>E-commerce Websites</h3>
-          <p>Developed e-commerce solutions with user-friendly interfaces and secure transactions for online businesses.</p>
-          <div class="project-tech">
-            <span>WordPress</span>
-            <span>WooCommerce</span>
-            <span>PHP</span>
-          </div>
-          <a class="project-link" href="#">
-            <i class="fas fa-arrow-right"></i> View Project
-          </a>
-        </div>
-
-        <div class="project-card">
-          <div class="project-badge">Award</div>
-          <div class="project-icon">
-            <i class="fas fa-heartbeat"></i>
-          </div>
-          <h3>Medipal – Hackathon Project</h3>
-          <p>
-            A collaborative hackathon project built with my teammates, focused on creating a medical assistance web application using modern full-stack technologies.
-          </p>
-          <div class="project-tech">
-            <span>Next.js</span>
-            <span>Node.js</span>
-            <span>MongoDB</span>
-          </div>
-          <a class="project-link" href="#" target="_blank">
-            <i class="fas fa-arrow-right"></i> View Project
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="section section-gradient">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Let's Connect!</h2>
-        <p class="section-desc">I'd love to hear from you</p>
-      </div>
-      <div class="contact-content">
-        <div class="contact-info">
-          <p class="contact-intro">Want to collaborate or hire me? Feel free to reach out! Let's create something amazing together!</p>
-          <div class="contact-methods">
-            <div class="contact-method">
-              <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-              <div>
-                <h4>Email</h4>
-                <p id="email-display">aachal.shres@gmail.com</p>
-                <button id="copy-email" class="btn-copy">
-                  <i class="fas fa-copy"></i> Copy Email
-                </button>
-              </div>
-            </div>
-            <div class="contact-method">
-              <div class="contact-icon"><i class="fab fa-github"></i></div>
-              <div>
-                <h4>GitHub</h4>
-                <p>github.com/aanchalshres</p>
-                <a href="https://github.com/aanchalshres" target="_blank" class="btn btn-outline">
-                  Visit Profile
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <p>Made with care by Aachal Shrestha</p>
-      <p class="footer-tagline">© 2025 - Turning ideas into beautiful reality</p>
-      <div class="social-links">
-        <a href="https://github.com/aanchalshres" target="_blank" rel="noopener" title="GitHub">
-          <i class="fab fa-github"></i>
-        </a>
-        <a href="mailto:aachal.shres@gmail.com" title="Email">
-          <i class="fas fa-envelope"></i>
-        </a>
-      </div>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
