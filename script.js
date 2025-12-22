@@ -295,7 +295,7 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// Add interactive emoji reactions on hover
+// Add interactive icon reactions on hover
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.stat').forEach(stat => {
     stat.addEventListener('mouseenter', function() {
