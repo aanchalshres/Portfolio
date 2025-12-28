@@ -4,7 +4,6 @@ import { useRef } from "react";
 import { SiJavascript, SiTypescript, SiNodedotjs, SiReact, SiLaravel, SiMysql } from "react-icons/si";
 
 const skills = [
-  { name: "Laravel", icon: <SiLaravel className="text-red-500" title="Laravel" />, color: "from-red-500/20 to-orange-500/20" },
   { name: "JavaScript", icon: <SiJavascript className="text-yellow-400" title="JavaScript" />, color: "from-yellow-500/20 to-amber-500/20" },
   { name: "Node.js", icon: <SiNodedotjs className="text-green-500" title="Node.js" />, color: "from-green-500/20 to-emerald-500/20" },
   { name: "MySQL", icon: <SiMysql className="text-blue-500" title="MySQL" />, color: "from-blue-500/20 to-cyan-500/20" },
