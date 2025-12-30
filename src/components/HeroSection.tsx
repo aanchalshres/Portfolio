@@ -82,8 +82,8 @@ const HeroSection = () => {
               {/* Image container */}
               <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-background animate-float">
                 <img
-                  src="https://avatars.githubusercontent.com/u/111445407?v=4"
-                  alt="Aachal Shrestha"
+                  src="https://github.com/aanchalshres.png"
+                  alt="GitHub Profile"
                   className="w-full h-full object-cover"
                 />
                 {/* Overlay gradient */}
