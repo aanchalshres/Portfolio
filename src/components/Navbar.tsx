@@ -46,10 +46,11 @@ const Navbar = () => {
           ))}
         </ul>
         <a
-          href="mailto:aachal.shres@gmail.com"
+          href="/resume.pdf"
+          download
           className="hidden md:inline-flex px-5 py-2 rounded-lg bg-primary text-primary-foreground font-semibold hover:shadow-[var(--glow-primary)] transition-all duration-300"
         >
-          Hire Me
+          My Resume
         </a>
       </div>
     </motion.nav>
