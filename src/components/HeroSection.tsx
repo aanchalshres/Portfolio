@@ -96,7 +96,7 @@ const HeroSection = () => {
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                 className="absolute -top-4 -right-4 w-16 h-16 rounded-xl bg-primary/20 backdrop-blur-sm border border-primary/30 flex items-center justify-center"
               >
-                <span className="text-2xl">⚛️</span>
+                <span className="text-2xl">💻</span>
               </motion.div>
               <motion.div
                 animate={{ y: [10, -10, 10] }}
