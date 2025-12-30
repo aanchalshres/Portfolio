@@ -7,9 +7,9 @@ const ContactSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const socialLinks = [
-    { icon: Github, href: "https://github.com/aachal", label: "GitHub" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Mail, href: "mailto:aachal.shres@gmail.com", label: "Email" },
+    { icon: Github, href: "https://github.com/aanchalshres", label: "GitHub" },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/aachal-shrestha-4b5449265/", label: "LinkedIn" },
+    { icon: Mail, href: "mailto:aachalshrsth@gmail.com", label: "Email" },
   ];
 
   return (
@@ -60,7 +60,7 @@ const ContactSection = () => {
             </div>
 
             <a
-              href="mailto:aachal.shres@gmail.com"
+              href="mailto:aachalshrsth@gmail.com"
               className="group flex items-center justify-center gap-3 w-full px-8 py-4 rounded-xl bg-gradient-to-r from-primary to-secondary text-primary-foreground font-bold text-lg transition-all duration-300 hover:shadow-[var(--glow-primary)] hover:-translate-y-1"
             >
               <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />

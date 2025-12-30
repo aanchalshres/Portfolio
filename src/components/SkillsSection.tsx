@@ -2,13 +2,18 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { SiJavascript, SiTypescript, SiNodedotjs, SiReact, SiLaravel, SiMysql } from "react-icons/si";
+import { SiNextdotjs, SiMongodb, SiCplusplus } from "react-icons/si";
 
 const skills = [
   { name: "JavaScript", icon: <SiJavascript className="text-yellow-400" title="JavaScript" />, color: "from-yellow-500/20 to-amber-500/20" },
+  { name: "Laravel", icon: <SiLaravel className="text-red-500" title="Laravel" />, color: "from-red-500/20 to-pink-500/20" },
   { name: "Node.js", icon: <SiNodedotjs className="text-green-500" title="Node.js" />, color: "from-green-500/20 to-emerald-500/20" },
-  { name: "MySQL", icon: <SiMysql className="text-blue-500" title="MySQL" />, color: "from-blue-500/20 to-cyan-500/20" },
   { name: "React", icon: <SiReact className="text-cyan-500" title="React" />, color: "from-cyan-500/20 to-blue-500/20" },
+  { name: "MongoDB", icon: <SiMongodb className="text-green-700" title="MongoDB" />, color: "from-green-700/20 to-green-500/20" },
   { name: "TypeScript", icon: <SiTypescript className="text-blue-600" title="TypeScript" />, color: "from-blue-600/20 to-indigo-500/20" },
+  { name: "Next.js", icon: <SiNextdotjs className="text-gray-300" title="Next.js" />, color: "from-gray-100/20 via-gray-300/20 to-blue-200/20" },
+  { name: "MySQL", icon: <SiMysql className="text-blue-500" title="MySQL" />, color: "from-blue-500/20 to-cyan-500/20" },
+  { name: "C/C++", icon: <SiCplusplus className="text-blue-400" title="C/C++" />, color: "from-blue-400/20 to-blue-700/20" },
 ];
 
 const SkillsSection = () => {

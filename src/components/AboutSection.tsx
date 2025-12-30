@@ -37,9 +37,7 @@ const AboutSection = () => {
                 <div className="absolute bottom-0 left-0 w-24 h-24 bg-accent/10 rounded-full blur-xl" />
                 
                 <p className="text-lg text-muted-foreground leading-relaxed relative z-10">
-                  I'm a passionate developer with a love for creating beautiful and functional 
-                  web experiences. My expertise lies in building modern, responsive websites 
-                  and applications.
+                  Computer science student with hands-on experience in full-stack development using Next.js, React, Node.js, Laravel, MongoDB, and MySQL. Strong problem-solving abilities and a solid base in C/C++, with a keen interest in building scalable and user-friendly applications.
                 </p>
                 <p className="text-lg text-muted-foreground leading-relaxed mt-4 relative z-10">
                   I'm always eager to learn new technologies and take on challenging projects 
@@ -56,10 +54,10 @@ const AboutSection = () => {
             className="grid grid-cols-2 gap-6"
           >
             {[
-              { label: "Years Experience", value: "2+" },
-              { label: "Projects Completed", value: "10+" },
-              { label: "Technologies", value: "15+" },
-              { label: "Happy Clients", value: "5+" },
+              { label: "Years Experience", value: "1+" },
+              { label: "Projects Completed", value: "5+" },
+              { label: "Technologies", value: "9+" },
+              { label: "Hackathons", value: "3+" },
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}
